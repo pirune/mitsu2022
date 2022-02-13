@@ -106,41 +106,33 @@ section {
   background-size: contain;
   background-position: center;
   position: relative; }
-  section.s1, section.s7 {
+  section.s1, section.s2, section.s7 {
     padding-top: 56.25%;
     position: relative;
-    height: 0; }
-    section.s1 iframe, section.s1 video, section.s7 iframe, section.s7 video {
+    height: 0;
+    background: #000; }
+    section.s1 iframe, section.s1 video, section.s2 iframe, section.s2 video, section.s7 iframe, section.s7 video {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
-  section.s2 {
-    min-height: 40vh;
-    text-align: center; }
   section.s3 {
-    background-image: url("../images/s3-bg.jpg");
+    background: url("../images/s3-bg.jpg") no-repeat center top;
     background-size: cover;
     text-align: center;
-    color: var(--color-white);
-    padding-top: 56.25%;
-    height: 0; }
+    color: var(--color-white); }
     section.s3 div {
-      position: absolute;
       bottom: auto;
-      top: 50%;
-      width: 70%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 70%; }
+      width: 100%;
+      margin: 30% auto 5%; }
       section.s3 div img {
-        width: 65%;
+        width: 64%;
         float: none; }
       section.s3 div h2 {
         margin: 0 0 4px; }
       section.s3 div p {
-        font-size: 3.3vw;
+        font-size: 3.5vw;
         font-style: italic;
         line-height: 1.2; }
   section.s4 .section4-slide .first, section.s4 .section4-slide .last {
@@ -175,8 +167,7 @@ section {
         margin-top: 3%; }
     section.s4 .section4-slide .last h2 {
       text-align: center;
-      font-size: 7vw;
-      font-style: italic; }
+      font-size: 7vw; }
     section.s4 .section4-slide .last ul li {
       border-radius: 16px;
       width: 100%;
@@ -230,16 +221,11 @@ section {
         section.s5 .section5-slide .first div div {
           margin-top: 35%;
           padding: 16px 10%; }
-          section.s5 .section5-slide .first div div p {
-            float: left;
-            margin-top: 12px; }
     section.s5 .section5-slide .last {
       background: #E0E2E1 url("../images/s5-bg-mobile.jpg") no-repeat right top;
       background-size: 200%;
       font-size: 3.4vw;
       padding: 32px 12px; }
-      section.s5 .section5-slide .last h2 {
-        font-style: italic; }
       section.s5 .section5-slide .last ul li {
         width: 100%;
         overflow: hidden;
@@ -253,7 +239,8 @@ section {
       section.s5 .section5-slide .last ul p {
         overflow: hidden;
         text-align: left;
-        padding-left: 3%; }
+        padding-left: 2%;
+        width: 65%; }
   section.s6 {
     max-height: calc(100vh - 60); }
     section.s6 .section6-slide {
@@ -266,12 +253,23 @@ section {
         background-size: 300%;
         float: left; }
         section.s6 .section6-slide .first > div {
-          padding: 45% 8px 20px;
+          padding: 42% 8px 20px;
           float: left;
           width: 100%; }
           section.s6 .section6-slide .first > div div {
-            margin: 16px 0 0;
+            margin: 12px 0 0;
             float: left; }
+            section.s6 .section6-slide .first > div div img {
+              border-radius: 16px; }
+            section.s6 .section6-slide .first > div div p {
+              width: 100%;
+              margin: 4px 0 8px;
+              overflow: hidden; }
+            section.s6 .section6-slide .first > div div div img {
+              width: 100%;
+              max-width: none; }
+          section.s6 .section6-slide .first > div .img {
+            width: 100%; }
         section.s6 .section6-slide .first h2, section.s6 .section6-slide .first h3 {
           margin: 0; }
         section.s6 .section6-slide .first h2 {
@@ -301,30 +299,6 @@ section {
           section.s6 .section6-slide .first li strong {
             font-size: 2.5vw;
             font-weight: 600; }
-        section.s6 .section6-slide .first .img {
-          width: 55%;
-          padding-top: 35%;
-          overflow: hidden;
-          border-radius: 20px;
-          background: url("../images/s6-slide1-img1.png") no-repeat left 8% bottom -20px;
-          background-size: cover;
-          float: left;
-          margin: 0; }
-          section.s6 .section6-slide .first .img + div {
-            width: 45%;
-            text-align: left;
-            padding-left: 10px;
-            font-size: 3.2vw;
-            margin: 20px 0; }
-            section.s6 .section6-slide .first .img + div img {
-              width: 100%;
-              max-width: none; }
-            section.s6 .section6-slide .first .img + div p {
-              width: 100%;
-              line-height: 1.3;
-              float: left;
-              overflow: hidden;
-              margin-top: 12px; }
       section.s6 .section6-slide .second h3, section.s6 .section6-slide .last h3 {
         position: relative; }
         section.s6 .section6-slide .second h3::before, section.s6 .section6-slide .last h3::before {
@@ -402,6 +376,9 @@ section {
     background: #000 url("../images/s10-bg.jpg") no-repeat right top -50px;
     background-size: 200%;
     padding-bottom: 40px; }
+    section.s10 h4 {
+      font-weight: 400;
+      font-size: 3.5vw; }
     section.s10 > div {
       padding: 20px;
       margin-top: 70%;
@@ -431,8 +408,23 @@ section {
   width: 100%;
   padding: 0; }
 
+.swiper-button-prev, .swiper-button-next {
+  background-repeat: no-repeat !important;
+  height: 32px !important;
+  width: 24px !important;
+  background-size: contain; }
+
+.swiper-button-prev {
+  left: 4px !important;
+  background-image: url("../images/icon-triangle.svg") !important; }
+
+.swiper-button-next {
+  right: 4px !important;
+  transform: rotate(180deg);
+  background-image: url("../images/icon-triangle.svg") !important; }
+
 :root {
-  --swiper-theme-color: rgba(0,0,0,.24) !important; }
+  --swiper-theme-color: transparent !important; }
 
 .swiper-button-disabled {
   opacity: 0 !important; }
@@ -535,16 +527,20 @@ footer {
     font-weight: 400; }
   section {
     text-align: left; }
-    section.s3 div img {
-      width: 70%;
-      float: none; }
-    section.s3 div h2 {
-      margin-top: 12px; }
-    section.s3 div p {
-      font-size: 2.8vw;
-      margin-top: 8px;
-      float: left;
-      width: 100%; }
+    section.s3 div {
+      margin-top: 26%;
+      overflow: hidden;
+      width: 70%; }
+      section.s3 div h2 {
+        margin-top: 12px; }
+      section.s3 div img {
+        width: 58%; }
+      section.s3 div p {
+        font-size: 2.2vw;
+        line-height: 1.3;
+        margin-top: 8px;
+        float: left;
+        width: 100%; }
     section.s4 {
       min-height: auto; }
       section.s4 > div {
@@ -566,7 +562,7 @@ footer {
           section.s4 .section4-slide .first > div:first-child {
             padding: 0 0 0 10%;
             text-align: left;
-            width: 50%; }
+            width: 51%; }
             section.s4 .section4-slide .first > div:first-child img {
               margin-bottom: 6%;
               width: 120%;
@@ -576,7 +572,7 @@ footer {
               float: left; }
           section.s4 .section4-slide .first > div:last-child {
             margin-top: 24px;
-            width: 55%;
+            width: 60%;
             position: absolute;
             bottom: 0;
             right: 0;
@@ -614,15 +610,9 @@ footer {
             section.s4 .section4-slide .last ul li > div {
               padding: 0 0 0 3%; }
     section.s5 {
-      min-height: auto;
-      height: 0;
-      padding-top: 50%; }
-      section.s5 > div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
+      min-height: auto; }
+      section.s5 h2 {
+        font-size: 3.4vw; }
       section.s5 .section5-slide .first {
         background: url("../images/s5-bg-large.jpg") no-repeat left top;
         background-size: 200%;
@@ -630,7 +620,7 @@ footer {
         section.s5 .section5-slide .first img {
           width: 40%;
           margin-left: 20px;
-          margin-top: 5%;
+          margin-top: 3%;
           align-items: center; }
         section.s5 .section5-slide .first > div {
           display: flex;
@@ -640,30 +630,38 @@ footer {
           section.s5 .section5-slide .first > div div {
             width: 80%;
             padding-left: 20px;
-            margin-top: 5%; }
+            margin-top: 2%;
+            font-size: 1.5vw; }
+            section.s5 .section5-slide .first > div div p {
+              margin-top: 0;
+              width: 100%;
+              line-height: 1.5; }
       section.s5 .section5-slide .last {
         background: url("../images/s5-bg-large.jpg") no-repeat right top;
-        background-size: 200%; }
+        background-size: 200%;
+        padding: 0; }
         section.s5 .section5-slide .last h2 {
           text-align: center;
+          font-size: 3.6vw;
           font-style: normal; }
         section.s5 .section5-slide .last div {
-          width: 100%; }
+          width: 100%;
+          margin: 3% 0; }
         section.s5 .section5-slide .last ul {
-          width: 80%;
-          overflow: hidden;
+          width: 70%;
           margin: 0 auto;
           display: flex;
           flex-wrap: wrap;
-          padding: 20px 0; }
+          padding: 0 0 20px 0; }
           section.s5 .section5-slide .last ul li {
             width: 50%;
-            padding: 8px 24px;
+            padding: 0 3% 0 0;
             margin-bottom: 0;
-            float: left;
             overflow: initial;
-            font-size: 1.8vw;
-            position: relative; }
+            font-size: 1.25vw;
+            position: relative;
+            display: inline-block;
+            text-align: center; }
             section.s5 .section5-slide .last ul li:nth-child(1) {
               order: 1; }
             section.s5 .section5-slide .last ul li:nth-child(2) {
@@ -680,127 +678,135 @@ footer {
               width: 15%;
               height: 15%;
               background: url("../images/s5-arrow1.png") no-repeat right center;
+              background-size: contain;
               position: absolute;
               top: 20%;
               right: -30px; }
             section.s5 .section5-slide .last ul li:nth-child(2)::after {
               content: '';
-              width: 10%;
-              height: 120%;
+              width: 11%;
+              height: 130%;
               background: url("../images/s5-arrow2.png") no-repeat center top;
               background-size: 80%;
               position: absolute;
               top: 25%;
-              right: 0; }
+              right: 0;
+              transform: translateX(100%); }
+            section.s5 .section5-slide .last ul li:nth-child(2), section.s5 .section5-slide .last ul li:nth-child(3) {
+              padding-right: 0;
+              padding-left: 3%; }
           section.s5 .section5-slide .last ul img {
-            width: 45%; }
-    section.s6 {
-      padding-top: 52%; }
-      section.s6 > div {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
-      section.s6 .section6-slide .first {
-        background: url("../images/s6-bg-large.jpg") no-repeat left top;
-        background-size: 310%; }
-        section.s6 .section6-slide .first > div {
-          padding: 0 20px;
-          width: 100%;
-          max-width: 960px;
-          margin: 0 auto;
-          overflow: hidden; }
-          section.s6 .section6-slide .first > div div {
-            float: left;
-            margin-bottom: 4px; }
-        section.s6 .section6-slide .first ul {
-          display: flex;
-          flex-wrap: wrap; }
-          section.s6 .section6-slide .first ul li {
-            width: calc(50% - 6px);
-            margin: 4px 6px;
-            font-size: 1.3vw;
-            line-height: 2.8; }
-            section.s6 .section6-slide .first ul li strong {
-              font-size: 1.2vw;
-              font-weight: 400; }
-            section.s6 .section6-slide .first ul li:nth-child(1) {
-              order: 1;
-              margin-left: 0; }
-            section.s6 .section6-slide .first ul li:nth-child(2) {
-              order: 3;
-              margin-left: 0; }
-            section.s6 .section6-slide .first ul li:nth-child(3) {
-              order: 5;
-              margin-left: 0; }
-            section.s6 .section6-slide .first ul li:nth-child(4) {
-              order: 2;
-              margin-right: 0; }
-            section.s6 .section6-slide .first ul li:nth-child(5) {
-              order: 4;
-              margin-right: 0; }
-            section.s6 .section6-slide .first ul li:nth-child(6) {
-              order: 6;
-              margin-right: 0; }
-        section.s6 .section6-slide .first h2 {
-          font-size: 4.2vw;
-          padding-left: 0;
-          margin: 0 0 8px;
-          line-height: 0.8; }
-        section.s6 .section6-slide .first h3 {
-          text-align: left;
-          padding-left: 50px;
-          font-size: 3.2vw;
-          margin: 0;
-          line-height: 0.8; }
-        section.s6 .section6-slide .first .img {
-          width: calc(50% - 8px);
-          padding-top: 18%; }
-          section.s6 .section6-slide .first .img + div {
+            width: 55%;
+            float: none; }
+          section.s5 .section5-slide .last ul p {
             width: 100%;
-            padding-left: 0;
-            margin: 8px 0 0; }
-            section.s6 .section6-slide .first .img + div img {
-              width: calc(50% - 8px); }
-            section.s6 .section6-slide .first .img + div p {
-              font-size: 1.6vw;
-              width: calc(50% - 8px);
-              margin-left: 16px;
-              line-height: 1.2;
-              margin-top: 4px; }
-      section.s6 .section6-slide .second {
-        background: url("../images/s6-bg-large.jpg") no-repeat left 47% top;
-        background-size: 310%; }
-        section.s6 .section6-slide .second > div {
-          width: 60%;
-          transform: translateX(20%); }
-        section.s6 .section6-slide .second .bg {
-          transform: translateX(0);
-          background-size: 160%; }
-      section.s6 .section6-slide .last .bg {
-        display: none; }
-      section.s6 .section6-slide .last > div {
-        width: 100%;
-        padding-top: 10%; }
-      section.s6 .section6-slide .last h3, section.s6 .section6-slide .last p {
-        width: 60%;
-        transform: translateX(50%); }
-      section.s6 .section6-slide .last .img {
-        width: 100%;
-        position: absolute;
-        bottom: 0; }
-        section.s6 .section6-slide .last .img img {
-          width: 50%; }
-      section.s6 .section6-slide .second h3, section.s6 .section6-slide .last h3 {
-        font-size: 4vw; }
-      section.s6 .section6-slide .second p, section.s6 .section6-slide .last p {
-        font-size: 2vw; }
-      section.s6 .note {
-        font-size: 1.2vw;
+            text-align: center;
+            padding-left: 0; }
+    section.s6 .section6-slide .first {
+      background: url("../images/s6-bg-large.jpg") no-repeat left top;
+      background-size: 310%; }
+      section.s6 .section6-slide .first h2, section.s6 .section6-slide .first h3 {
         width: 100%;
         overflow: hidden;
-        float: left; }
+        line-height: 1.2; }
+      section.s6 .section6-slide .first h2 {
+        font-size: 3.2vw;
+        padding-left: 0;
+        margin: 0 0 0; }
+      section.s6 .section6-slide .first h3 {
+        text-align: left;
+        padding-left: 50px;
+        font-size: 2.5vw;
+        margin: 0; }
+      section.s6 .section6-slide .first > div {
+        padding: 20px;
+        width: 100%;
+        max-width: 95%;
+        margin: 0 0 0 5%;
+        overflow: hidden; }
+        section.s6 .section6-slide .first > div > div {
+          float: left;
+          margin-top: 8px;
+          margin-bottom: 4px; }
+          section.s6 .section6-slide .first > div > div img, section.s6 .section6-slide .first > div > div p {
+            width: calc(50% - 6px); }
+          section.s6 .section6-slide .first > div > div img {
+            float: none; }
+          section.s6 .section6-slide .first > div > div p {
+            margin: 0 0 0 6px;
+            font-size: 1.5vw;
+            line-height: 1.3; }
+          section.s6 .section6-slide .first > div > div > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center; }
+        section.s6 .section6-slide .first > div .img {
+          text-align: center;
+          width: calc(50% - 6px);
+          margin-right: 6px; }
+          section.s6 .section6-slide .first > div .img img {
+            width: 80%; }
+      section.s6 .section6-slide .first ul {
+        display: flex;
+        flex-wrap: wrap; }
+        section.s6 .section6-slide .first ul li {
+          width: calc(50% - 6px);
+          margin: 4px 6px;
+          font-size: 1.3vw;
+          line-height: 2.8; }
+          section.s6 .section6-slide .first ul li strong {
+            font-size: 1.2vw;
+            font-weight: 400; }
+          section.s6 .section6-slide .first ul li:nth-child(1) {
+            order: 1;
+            margin-left: 0; }
+          section.s6 .section6-slide .first ul li:nth-child(2) {
+            order: 3;
+            margin-left: 0; }
+          section.s6 .section6-slide .first ul li:nth-child(3) {
+            order: 5;
+            margin-left: 0; }
+          section.s6 .section6-slide .first ul li:nth-child(4) {
+            order: 2;
+            margin-right: 0; }
+          section.s6 .section6-slide .first ul li:nth-child(5) {
+            order: 4;
+            margin-right: 0; }
+          section.s6 .section6-slide .first ul li:nth-child(6) {
+            order: 6;
+            margin-right: 0; }
+    section.s6 .section6-slide .second {
+      background: url("../images/s6-bg-large.jpg") no-repeat left 47% top;
+      background-size: 310%; }
+      section.s6 .section6-slide .second > div {
+        width: 60%;
+        transform: translateX(20%); }
+      section.s6 .section6-slide .second .bg {
+        transform: translateX(0);
+        background-size: 160%; }
+    section.s6 .section6-slide .last .bg {
+      display: none; }
+    section.s6 .section6-slide .last > div {
+      width: 100%;
+      padding-top: 10%; }
+    section.s6 .section6-slide .last h3, section.s6 .section6-slide .last p {
+      width: 60%;
+      transform: translateX(50%); }
+    section.s6 .section6-slide .last .img {
+      width: 100%;
+      position: absolute;
+      bottom: 0; }
+      section.s6 .section6-slide .last .img img {
+        width: 50%; }
+    section.s6 .section6-slide .second h3, section.s6 .section6-slide .last h3 {
+      font-size: 4vw; }
+    section.s6 .section6-slide .second p, section.s6 .section6-slide .last p {
+      font-size: 2vw; }
+    section.s6 .note {
+      font-size: 1.2vw;
+      width: 100%;
+      overflow: hidden;
+      float: left; }
     section.s8 {
       text-align: center;
       flex-direction: row;
@@ -828,23 +834,29 @@ footer {
       section.s10 > div {
         margin-top: 0;
         float: left;
-        font-size: 2.4vw; }
+        line-height: 1.2; }
+        section.s10 > div h1 {
+          font-size: 3.3vw; }
+        section.s10 > div h4 {
+          font-size: 1.8vw;
+          width: 100%; }
         section.s10 > div div {
-          width: 45%; }
-          section.s10 > div div h4 {
-            width: 80%; }
+          width: 48%;
+          margin-left: 8%;
+          float: left;
+          overflow: hidden; }
           section.s10 > div div img:first-of-type {
-            width: 100%;
-            margin-top: 2%; }
+            width: 75%; }
           section.s10 > div div p {
             width: 100%;
-            margin: 2% 0; }
+            margin: 2% 0;
+            font-size: 1.9vw; }
         section.s10 > div > img {
           top: auto;
           bottom: 20px;
           right: 40px;
           transform: translateY(0);
-          width: 33%; }
+          width: 24%; }
   .slide8 {
     text-align: center; }
     .slide8 div {
@@ -876,9 +888,18 @@ footer {
     font-size: 14px;
     text-align: left; }
   footer .iso p {
-    font-size: 10px; } }
+    font-size: 10px; }
+  .swiper-button-next {
+    right: 10px !important; }
+  .swiper-button-prev {
+    left: 10px !important; }
+  .swiper-button-prev, .swiper-button-next {
+    height: 44px !important;
+    width: 27px !important; } }
 
 @media screen and (min-width: 60em) {
+  section.s1, section.s2, section.s7 {
+    padding-top: 50%; }
   .slide8 {
     padding: 50px 0; }
     .slide8 .layout {
@@ -897,5 +918,19 @@ footer {
     font-size: 3.8vw; }
   section.s4 .section4-slide .first > div:first-child {
     padding-left: 15%; }
-  section.s4 .section4-slide .first > div:last-child {
-    width: 50%; } }
+  section.s5 h2 {
+    margin-top: 5%; }
+  section.s5 .section5-slide .first img {
+    width: 35%; }
+  section.s5 .section5-slide .first > div {
+    width: 70%; }
+    section.s5 .section5-slide .first > div div p {
+      margin-top: 8px; }
+  section.s6 .section6-slide .first ul li {
+    font-size: 1vw;
+    line-height: 2.5; }
+    section.s6 .section6-slide .first ul li strong {
+      font-size: 1vw;
+      font-weight: 400; }
+  section.s6 .note {
+    font-size: 0.9vw; } }
