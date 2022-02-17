@@ -496,6 +496,33 @@ footer {
     font-size: 2.5vw;
     line-height: 1.4; }
 
+.cookie {
+  background-color: #37C6F2;
+  color: var(--color-white);
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  font-size: 1.4rem;
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: none; }
+  .cookie a {
+    color: #fff; }
+  .cookie button {
+    background-color: #fff;
+    color: #37C6F2;
+    border: 0;
+    height: 32px;
+    padding: 0 16px;
+    font-family: 'Kanit', sans-serif;
+    margin-top: 16px;
+    cursor: pointer; }
+  .cookie.display {
+    display: block; }
+
 @media screen and (min-width: 48em) {
   h1 {
     font-size: 4.3vw; }
@@ -576,7 +603,7 @@ footer {
             position: absolute;
             bottom: 0;
             right: 0;
-            z-index: -1; }
+            z-index: 0; }
             section.s4 .section4-slide .first > div:last-child img {
               width: 100%;
               float: right; }
@@ -909,7 +936,15 @@ footer {
       float: left; }
     .slide8 div a {
       margin-top: 20px;
-      font-size: 20px; } }
+      font-size: 20px; }
+  .cookie p {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 32px; }
+  .cookie button {
+    margin-top: 0;
+    width: 80px;
+    margin-left: 20px; } }
 
 @media screen and (min-width: 64em) {
   body {
