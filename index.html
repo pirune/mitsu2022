@@ -278,41 +278,46 @@
                 prevEl: ".swiper-button-prev",
             },
         });
-        
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                // date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                date.setTime(date.getTime() + 1 * 60 * 1000);
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
+        let cookieBar = document.querySelector('.cookie')
+        let cookieBtn = document.querySelector('.cookie button')
+        cookieBtn.addEventListener('click', () => {
+            cookieBar.setAttribute('style', 'display: none;')
 
-        var x = getCookie('cookieAccept');
-        if (x) {
-            console.log(x);
-        } else {
-            let cookieBar = document.querySelector('.cookie')
-            cookieBar.classList.add('display')
-            let cookieBtn = document.querySelector('.cookie button')
-            cookieBtn.addEventListener('click', () => {
-                setCookie('cookieAccept', 'accepted', 7);
-                console.log('add cookie');
-                cookieBar.classList.remove('display')
-            })
-        }
+        })
+        // function setCookie(name, value, days) {
+        //     var expires = "";
+        //     if (days) {
+        //         var date = new Date();
+        //         // date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        //         date.setTime(date.getTime() + 1 * 60 * 1000);
+        //         expires = "; expires=" + date.toUTCString();
+        //     }
+        //     document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        // }
+        // function getCookie(name) {
+        //     var nameEQ = name + "=";
+        //     var ca = document.cookie.split(';');
+        //     for (var i = 0; i < ca.length; i++) {
+        //         var c = ca[i];
+        //         while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        //         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        //     }
+        //     return null;
+        // }
+
+        // var x = getCookie('cookieAccept');
+        // if (x) {
+        //     console.log(x);
+        // } else {
+        //     let cookieBar = document.querySelector('.cookie')
+        //     cookieBar.classList.add('display')
+        //     let cookieBtn = document.querySelector('.cookie button')
+        //     cookieBtn.addEventListener('click', () => {
+        //         setCookie('cookieAccept', 'accepted', 7);
+        //         console.log('add cookie');
+        //         cookieBar.classList.remove('display')
+        //     })
+        // }
     </script>
 </body>
 </html>
