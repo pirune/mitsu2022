@@ -118,7 +118,10 @@ section {
       width: 100%;
       height: 100%; }
   section.s1 {
-    padding-top: 50.8% !important; }
+    padding-top: 0% !important;
+    height: auto; }
+    section.s1 img {
+      width: 100%; }
   section.s3 {
     background: url("../images/s3-bg.jpg") no-repeat center top;
     background-size: cover;

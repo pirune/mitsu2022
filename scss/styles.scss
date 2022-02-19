@@ -101,7 +101,15 @@ section {
         }
     }
     &.s1 {
-        padding-top: 50.8% !important;
+        // In case of VDO insert
+        // padding-top: 50.8% !important;
+
+        // In case of GIF insert
+        padding-top: 0% !important;
+        height: auto;
+        img {
+            width: 100%;
+        }
     }
     &.s3 {
         background: url('../images/s3-bg.jpg') no-repeat center top;
